@@ -1,5 +1,9 @@
+import Home from "./Home";
+import Profile from "./Profile";
+import Contact from "./Contact"
+
 export default {
-    Home: require("./Home"),
-    Profile: require("./Profile"),
-    Contact: require("./Contact")
+    Home: Home,
+    Profile: Profile,
+    Contact: Contact
 };
