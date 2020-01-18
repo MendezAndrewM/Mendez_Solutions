@@ -2,7 +2,6 @@ import React, { useState, Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import logo from './logo.svg'; //Not in use
 import { render } from 'react-dom';  //who dis?
-import './App.css';
 import page from "./pages";
 
 
