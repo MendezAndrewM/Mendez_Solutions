@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import "./Home.css";
+import "./Home.scss";
 
 const Home = props => {
     const [nav, setNav] = useState(0);
@@ -28,7 +28,6 @@ const Home = props => {
                     </Row>
                 </Col>
                 <Col md={6} lg={7} xl={8} id="Animation">
-                    <div id="sassTest"></div>
                 </Col>
             </Row>
 
