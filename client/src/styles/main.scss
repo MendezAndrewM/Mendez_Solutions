@@ -7,6 +7,7 @@ body {
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
 	animation: Gradient 15s ease infinite;
+	// overflow: hidden;
 }
 @-webkit-keyframes Gradient {
 	0% {background-position: 0% 50%}
@@ -27,9 +28,7 @@ body {
 button {
     background-color: rgba(27, 27, 27, 0);
     color: #fff;
-    font-size: 3vh;
     border: #fff solid 1px;
-    padding: 2px 6px 2px 6px;;
 }
 button:hover {
     cursor: pointer;
@@ -45,7 +44,8 @@ button:hover {
 }
 button:active {
     transform: translateY(4px);
-    background-color: rgba(0, 0, 0, 1);
+	background-color: rgba(0, 0, 0, 1);
+	border: #8cbfd6;
 }
 a {
     color: rgb(124, 149, 187);
