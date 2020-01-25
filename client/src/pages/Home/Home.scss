@@ -1,4 +1,53 @@
-#sassTest {
-	background-color: #00ff00;
-	padding: 50px;
+#Title {
+    margin: 1em;
+    margin-top: 40vh;
 }
+
+#Header {
+    font-size: 2.75rem;
+}
+
+#subTitle {
+    font-size: large;
+}
+
+.HomeButton {
+    font-size: 1.2rem;
+    width: 100%;
+
+    // padding: 0 2rem 0 2rem;
+    margin-top: 1rem;
+    border-radius: .2rem;
+}
+.HomeButtons {max-width: 365px;}
+
+@media only screen and (max-width: 850px) {
+    #Title { margin-top: 38vh;}
+    // #Header { font-size: 2.65rem;}
+    // #subTitle { font-size: 1.25rem; }
+    .HomeButton { font-size: 1.25rem; }
+    // .HomeButtons { max-width: 1.5rem;}
+  }
+
+@media only screen and (max-width: 650px) {
+    #Title { margin-top: 38vh;}
+    #Header { font-size: 2.65rem;}
+    #subTitle { font-size: 1.25rem; }
+    .HomeButton { font-size: 1.25rem; }
+    // .HomeButtons { max-width: 1.5rem;}
+  }
+
+  @media only screen and (max-width: 432px) {
+    #Title { margin-top: 34vh; }
+    #Header { font-size: 2.25rem;}
+    #subTitle { font-size: .95rem; }
+    .HomeButton { font-size: 1rem; }
+    .HomeButtons { max-width: 290px;}
+  }
+
+  @media only screen and (max-width: 368px) {
+    #Title { margin-top: 30vh; }
+    #Header { font-size: 1.85rem;}
+    #subTitle { font-size: .95rem; }
+    .HomeButton { font-size: 1rem; }
+  }
