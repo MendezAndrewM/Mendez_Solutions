@@ -6,8 +6,6 @@ const Home = props => {
     const [nav, setNav] = useState(0);
 
     return (<>
-        {/* {nav ? <Nav/> : null}  */}
-        {/* 1.Need Nav built 2.might not be using hooks right 3.null might be wrong(maybe just empty tag?)*/}
         <Container>
 
             <Row className="justify-content-xs-center justify-content-lg-start">
