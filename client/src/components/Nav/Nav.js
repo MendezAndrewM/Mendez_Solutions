@@ -5,8 +5,15 @@ import "./Nav.scss";
 
 const Nav = () => {
 
-	const openNav = () => document.getElementById("sideNav").style.width = "55vw";
-	const closeNav = () => document.getElementById("sideNav").style.width = "0";
+	const openNav = e => {
+		e.preventDefault();
+		document.getElementById("sideNav").style.width = "55vw";
+	}
+	const closeNav = e => {
+		e.preventDefault();
+		document.getElementById("sideNav").style.width = "0";
+	}
+
 
 	return (
 		<>
