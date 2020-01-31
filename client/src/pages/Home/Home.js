@@ -26,7 +26,7 @@ const Home = props => {
                             <Row className="HomeButtons">
                                 <Col xs={6}>
                                     <Link to="/About">
-                                        <button className="HomeButton" onClick={window.location}>About</button>
+                                        <button className="HomeButton">About</button>
                                     </Link>
                                 </Col>
                                 <Col xs={6  }>

@@ -45,12 +45,32 @@ const Nav = () => {
 			</nav>
 			<div id="sideNav" class="sidePanel">
 				<span class="closeBtn" onClick={closeNav}>&times;</span>
-				<Link to="/About">About</Link>
-				<Link to="/Profile">Profile</Link>
-				<Link to="/Contact">Contact</Link>
+				<Link to="/About" onClick={closeNav}>About</Link>
+				<Link to="/Profile" onClick={closeNav}>Profile</Link>
+				<Link to="/Contact" onClick={closeNav}>Contact</Link>
 			</div>
 		</>
 	)
 }
 	
 export default Nav;
+
+
+
+/*
+
+############ Instead of current switch container in App.js:
+
+const Navbar = props => {
+  const path = props.location.pathname !== "/";
+  return (
+      path ? (
+        <>
+        Navbar
+        <Link to="/">Home</Link>
+        </>
+      ) : null
+  );
+};
+export default withRouter(Navbar);
+*/
