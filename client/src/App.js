@@ -20,7 +20,7 @@ const App = props => {
                 {/* <Nav loggedIn={this.state.isSignedIn} /> */}
                 <Route exact path="/" component={page.Home} />
                 <Route exact path="/Contact" component={page.Contact} />
-                <Route exact path="/profile" component={page.Profile} /> 
+                <Route exact path="/Profile" component={page.Profile} /> 
                 
             </div>
             {window.location.href === domain ? null : <Footer />}

@@ -27,13 +27,13 @@ const Nav = () => {
 						justify-content-md-end justify-content-lg-end justify-content-xl-end">
 							<ul id="navLinks">
 								<li className="navItem">
-									<Link to="/About" onClick={closeNav}>About</Link>
+									<Link to="/About">About</Link>
 								</li>
 								<li className="navItem">
-									<Link to="/Profile" onClick={closeNav}>Profile</Link>
+									<Link to="/Profile">Profile</Link>
 								</li>
 								<li className="navItem">
-									<Link to="/Contact" onClick={closeNav}>Contact</Link>
+									<Link to="/Contact">Contact</Link>
 								</li>
 								<li id="hamburger">
 									<i className="fa fa-bars fa-lg" onClick={openNav}></i>
@@ -45,9 +45,9 @@ const Nav = () => {
 			</nav>
 			<div id="sideNav" class="sidePanel">
 				<span class="closeBtn" onClick={closeNav}>&times;</span>
-				<Link to="/About" onClick={closeNav}>About</Link>
-				<Link to="/Profile" onClick={closeNav}>Profile</Link>
-				<Link to="/Contact" onClick={closeNav}>Contact</Link>
+				<Link onClick={closeNav} to="/About" >About</Link>
+				<Link onClick={closeNav} to="/Profile" >Profile</Link>
+				<Link onClick={closeNav} to="/Contact" >Contact</Link>
 			</div>
 		</>
 	)
