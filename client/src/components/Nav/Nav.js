@@ -20,7 +20,7 @@ const Nav = () => {
 			<nav>
 				<Row>
 					<Col xs={10} sm={10} md={8} lg={6}>
-						<Link to="/" id="navHeader">Mendez Solutions {console.log("vertical position needs to be fixed")}</Link>
+						<Link to="/" id="navHeader">Mendez Solutions</Link>
 					</Col>
 					<Col xs={2} sm={2} md={4} lg={6}>
 						<Row className="justify-content-xs-end justify-content-sm-end 
@@ -43,8 +43,8 @@ const Nav = () => {
 					</Col>
 				</Row>
 			</nav>
-			<div id="sideNav" class="sidePanel">
-				<span class="closeBtn" onClick={closeNav}>&times;</span>
+			<div id="sideNav" className="sidePanel">
+				<span className="closeBtn" onClick={closeNav}>&times;</span>
 				<Link onClick={closeNav} to="/About" >About</Link>
 				<Link onClick={closeNav} to="/Profile" >Profile</Link>
 				<Link onClick={closeNav} to="/Contact" >Contact</Link>
