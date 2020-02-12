@@ -45,9 +45,9 @@ const Nav = () => {
 			</nav>
 			<div id="sideNav" className="sidePanel">
 				<span className="closeBtn" onClick={closeNav}>&times;</span>
-				<Link onClick={closeNav} to="/About" >About</Link>
+				<Link to="/About" >About</Link>
 				<Link onClick={closeNav} to="/Profile" >Profile</Link>
-				<Link onClick={closeNav} to="/Contact" >Contact</Link>
+				<Link to="/Contact" >Contact</Link>
 			</div>
 		</>
 	)

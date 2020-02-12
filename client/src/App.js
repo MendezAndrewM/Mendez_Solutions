@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router"
 import Nav from "./components/Nav";
@@ -8,11 +8,11 @@ import page from "./pages";
 const domain = window.location.href.match(/Mendez-Solutions/i) 
     ? `https://www.mendez-solutions.com/`
     : `http://localhost:3000/`;
-
+    
 const App = props => {
-  
-    const homeContainer = () => <Route exact path="/" component={page.Home} />
 
+
+    const homeContainer = () => <Route exact path="/" component={page.Home} />
     const defaultContainer = () => (
         <>
             <Nav />
