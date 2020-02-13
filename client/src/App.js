@@ -1,7 +1,6 @@
-import React, { useState, Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import logo from './logo.svg'; //Not in use
-import { render } from 'react-dom';  //who dis?
+import { Switch } from "react-router"
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import page from "./pages";
@@ -9,27 +8,33 @@ import page from "./pages";
 const domain = window.location.href.match(/Mendez-Solutions/i) 
     ? `https://www.mendez-solutions.com/`
     : `http://localhost:3000/`;
-
+    
 const App = props => {
-    // const [signedIn, setAuth] = useState(0);
 
-    return (
+
+    const homeContainer = () => <Route exact path="/" component={page.Home} />
+    const defaultContainer = () => (
         <>
-            <Router>
-                {window.location.href === domain ? null : <Nav />}
-                <div>
-                    {/* <Nav loggedIn={this.state.isSignedIn} /> */}
-                    <Route exact path="/" component={page.Home} />
-                    <Route exact path="/Contact" component={page.Contact} />
-                    <Route exact path="/profile" component={page.Profile} /> 
-                    
-                </div>
-                {window.location.href === domain ? null : <Footer />}
-            </Router>
+            <Nav />
+            <div>
+                {/* <Nav loggedIn={this.state.isSignedIn} /> */}
+                <Route exact path="/" component={page.Home} />
+                <Route exact path="/Contact" component={page.Contact} />
+                <Route exact path="/Profile" component={page.Profile} /> 
+                
+            </div>
+            {window.location.href === domain ? null : <Footer />}
         </>
     )
-    
-}
 
+    return (
+        <Router>
+            <Switch>
+                <Route exact path="/" component={homeContainer}/>
+                <Route component={defaultContainer}/>
+            </Switch>
+        </Router>
+    )
+}
 
 export default App;
