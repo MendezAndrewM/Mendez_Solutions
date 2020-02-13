@@ -2,31 +2,13 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faCity, faEnvelope, faPhone, faPen } from '@fortawesome/free-solid-svg-icons';
 import { Row, Col, Container } from "react-bootstrap";
+import Viewport from "../../Hooks"
 import "./Form.scss";
 // import Input from "./Input";
 
-const getWindowDimensions = () => {
-	const { innerWidth: width, innerHeight: height } = window;
-	return { width, height };
-  }
-
-const useWindowDimensions = () => {
-	const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-	useEffect(() => {
-	  function handleResize() {
-		setWindowDimensions(getWindowDimensions());
-	  }
-	  window.addEventListener('resize', handleResize);
-	  return () => window.removeEventListener('resize', handleResize);
-	}, []);
-
-	return windowDimensions;
-  }
-
-
 const Form = props => {
 	
-	const { height, width } = useWindowDimensions();
+	const { height, width } = Viewport();
 	//Hard Coded:
 	return(
 		<Container>
