@@ -98,6 +98,7 @@ const Form = props => {
 					</Col>
 				</Row>
 
+				<input type="submit" value="submit" className="fromSubmit" />
 			</form>
 		</Container>
 	)
