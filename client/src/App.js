@@ -1,4 +1,5 @@
 import React, { Component, useEffect } from 'react';
+import { library } from "./assets/icons";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router"
 import Nav from "./components/Nav";
