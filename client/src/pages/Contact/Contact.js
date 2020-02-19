@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import Form from "../../components/Form"
-import "../../styles/grid.scss"
+import "../../assets/styles/grid.scss"
 // const testObjs = [
 // 	{
 // 		label: "firstName",
