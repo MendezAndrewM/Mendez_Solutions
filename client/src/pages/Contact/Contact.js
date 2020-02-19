@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { Container } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import Form from "../../components/Form"
-
+import "../../assets/styles/grid.scss"
 // const testObjs = [
 // 	{
 // 		label: "firstName",
@@ -37,11 +37,39 @@ const Contact = props => {
 		document.getElementById("sideNav").style.width = "0";
 	})
 
-	return (
-		<Container>
-			<p>-- contact page --</p>
-			<Form />
-		</Container>
+	return(
+			<>
+		<div className="Moop">
+			<Row>
+				<Col xs={12} s={12} m={4} lg={4} xl={3}>
+					<h1>Contact</h1>
+				</Col>
+				<Col xs={12} s={12} m={8} lg={8} xl={9}>
+					<p>Some Stuff about this being the contact page...</p>
+				</Col>
+			</Row>
+			<Row>
+				<Col xs={12} s={12} m={4} lg={3} xl={2}>
+					<div className="fillerBox">
+						<p>email: qwertyuiop@asdfghjkl.zxcvbnm</p>
+						<p>Phone</p>
+						<br />
+						<button>GitHub</button>
+						<button>Codepen</button>
+						<button>Linkedin</button>
+					</div>
+				</Col>
+				<Col xs={12} s={12} m={8} lg={9} xl={10}>
+					<Form />
+				</Col>
+			</Row>
+		</div>
+
+		<div className="Moop">
+			<div className="TestThing"></div>
+		</div>
+</>
+
 	)
 }
 

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import "./Nav.scss";
 
 const Nav = () => {
@@ -36,7 +38,8 @@ const Nav = () => {
 									<Link to="/Contact">Contact</Link>
 								</li>
 								<li id="hamburger">
-									<i className="fa fa-bars fa-lg" onClick={openNav}></i>
+									{/* <i className="fa fa-bars fa-lg" onClick={openNav}></i> */}
+									<FontAwesomeIcon icon="bars" onClick={openNav}/>
 								</li>
 							</ul>
 						</Row>

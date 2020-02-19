@@ -161,3 +161,52 @@ label:hover{
 .floating-label-wrap {
 	max-width: 92%;
 }
+
+
+
+
+
+
+
+
+
+
+
+//////   Material UI Overrides   \\\\\\\\
+
+.MuiFormHelperText-root {
+    color: rgba(0, 102, 0, 0.89);
+    margin: 0;
+    font-size: 0.75rem;
+    margin-top: 3px;
+    text-align: left;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+}
+
+
+
+.wasClicked {
+	.MuiInputBase-root {
+		input:valid + fieldset {
+			border-color: rgba(0, 102, 0, 0.89);
+			border-width: 2;
+		}
+	}
+}
+.wasClicked:invalid + fieldset {
+	border-color: rgba(0, 102, 0, 0.89);
+	border-width: 2;
+}
+
+
+// & input:valid + fieldset: {
+// 	borderColor: 'rgba(0, 102, 0, 0.89)',
+// 	borderWidth: 2,
+//   }
+//   & input:invalid + fieldset: {
+// 	borderColor: 'rgba(143,0,0,0.9)', //invalid border color (red)
+// 	borderWidth: 2,
+//   }
