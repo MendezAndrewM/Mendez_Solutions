@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from "@material-ui/core/Grid"
+import ContentBox from "../../components/ContentBox/ContentBox"
 import Form from "../../components/Form"
 import Viewport from "../../Hooks"
 import "../../assets/styles/grid.scss"
@@ -52,7 +53,9 @@ const Contact = props => {
 				</Grid>
 
 				<Grid container xs={12} md={9}>
-					<Form />
+					<ContentBox>
+						<Form />
+					</ContentBox>
 				</Grid>
 			</Grid>
 		</div>
