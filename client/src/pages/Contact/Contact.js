@@ -26,11 +26,27 @@ const Contact = props => {
 				
 				<Grid container xs={12} md={3}>
 					
-					<Grid item xs={12} lg={3}>
-						<span>Email</span>
+					<Grid item xs={12}>
+						<span className="contactItemHeader">Email</span>
 					</Grid>
-					<Grid item xs={12} lg={9}>
-						<span>Mendez.AndrewM@Gmail.com</span>
+					<Grid item xs={12}>
+						<span className="contactItem">Mendez.AndrewM@Gmail.com</span>
+					</Grid>
+					<Grid item xs={12}>
+						<span className="contactItemHeader">Phone #</span>
+					</Grid>
+					<Grid item xs={12}>
+						<span className="contactItem">(602)730-6092</span>
+					</Grid>
+					<Grid item xs={12}>
+						<span className="contactItemHeader">Social Media</span>
+					</Grid>
+					<Grid item xs={12}>
+						<div className="contactItem" id="socialButtons">
+						<button>GitHub</button>
+// 						<button>Codepen</button>
+// 						<button>Linkedin</button>
+						</div>
 					</Grid>
 
 				</Grid>
