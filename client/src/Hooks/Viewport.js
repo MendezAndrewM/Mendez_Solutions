@@ -5,7 +5,7 @@ function getWindowDimensions() {
   return { width, height };
 }
 
-export default function Viewport() {
+export default function useViewport() {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
   useEffect(() => {

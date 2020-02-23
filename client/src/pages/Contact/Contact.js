@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from "@material-ui/core/Grid"
 import ContentBox from "../../components/ContentBox/ContentBox"
 import Form from "../../components/Form"
-import Viewport from "../../Hooks"
+import hook from "../../Hooks"
 import "../../assets/styles/grid.scss"
 
 const useStyles = makeStyles(() => ({ root: { flexGrow: 1 } }))
@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({ root: { flexGrow: 1 } }))
 
 const Contact = props => {
 	
-	const {width} = Viewport();
+	const {width} = hook.useViewport();
 	const classes=useStyles();
 	
 	useEffect(()=> {
@@ -54,6 +54,9 @@ const Contact = props => {
 
 				<Grid container xs={12} md={9}>
 					<ContentBox>
+						<h1>Contact</h1>
+						<br />
+						<span>If you wish to get in contact, please call, email, or fill out the form below</span>
 						<Form />
 					</ContentBox>
 				</Grid>

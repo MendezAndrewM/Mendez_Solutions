@@ -3,7 +3,8 @@ import { withStyles, makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import {activeOpt, activeReq, inactiveOpt, inactiveReq} from "./injections"
 import { Grid } from '@material-ui/core';
-import Viewport from "../../Hooks"
+import hook from "../../Hooks"
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -27,7 +28,8 @@ const useStyles = makeStyles(theme => ({
 export default function Form() {
 
 	const classes = useStyles();
-	const { width } = Viewport();
+	const { width } = hook.useViewport();
+	const {inputs, handleInputChange, handleSubmit} = hook.useFormInputs();
 
 	const [firstNameClicked, clickFirstName] = useState(false)
 	const [lastNameClicked, clickLastName] = useState(false)
@@ -46,23 +48,29 @@ export default function Form() {
 	const MessageField = withStyles( messageClicked ? activeReq : inactiveReq)(TextField);
 	
 
+
 	return (
-		<form className={classes.root, classes.gridRoot} noValidate>
+		<form className={classes.root, classes.gridRoot} onSubmit={handleSubmit} noValidate>
 			<Grid container spacing={2}>
 				<Grid item xs={6} md={4}>
 					<NameField
 						className={classes.margin}
 						label="First Name"
+						name="firstName"
 						required
 						variant="outlined"
 						id="firstNameField"
+						onChange={handleInputChange}
+						value={inputs.firstName}
 						// helperText="Required!"
 						onFocus={() => {
-							clickFirstName(true);
-							setTimeout(
-								() => document.getElementById("firstNameField").focus(),
-								1
-							);
+							if(!firstNameClicked) {
+								clickFirstName(true);
+								setTimeout(
+									() => document.getElementById("firstNameField")
+									.focus(), 1
+								);
+							}
 						}}
 					/>
 				</Grid>
